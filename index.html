@@ -75,6 +75,28 @@
         box-shadow: 0 7px 15px rgba(0, 0, 0, 0.125);
       }
 
+      .phoneImage1 {
+        left: 23%;
+        bottom: -37%;
+        animation: toLeftTop 0.7s ease-out;
+      }
+
+      .phoneImage2 {
+        width: 23vw;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -45%;
+        z-index: 99;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        animation: toTop 0.7s ease-out;
+      }
+
+      .phoneImage3 {
+        right: 23%;
+        bottom: -37%;
+        animation: toRightTop 0.7s ease-out;
+      }
+
       .button {
         margin-top: 20px;
         display: inline-block;
@@ -118,6 +140,32 @@
           bottom: -45%;
         }
       }
+
+      @media screen and (max-width: 768px) {
+        .phoneImage1,
+        .phoneImage3 {
+          display: none;
+        }
+
+        .main-text {
+          width: 90vw;
+          margin: 5vh auto 0;
+          text-align: center;
+          font-size: 5vw;
+        }
+
+        .sub-text {
+          width: 80vw;
+          margin: 1vh auto 0;
+          text-align: center;
+          font-size: 3.5vw;
+          word-break: keep-all;
+        }
+
+        .phoneImage2 {
+          width: 80vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,28 +178,8 @@
       </p>
       <!-- <a href="cofinder://download" class="button">앱 다운로드</a> -->
     </div>
-    <img
-      src="./sc_3.png"
-      class="phoneImage"
-      style="left: 23%; bottom: -37%; animation: toLeftTop 0.7s ease-out"
-    />
-    <img
-      src="./sc_4.png"
-      class="phoneImage"
-      style="
-        width: 23vw;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -45%;
-        z-index: 99;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-        animation: toTop 0.7s ease-out;
-      "
-    />
-    <img
-      src="./sc_5.png"
-      class="phoneImage"
-      style="right: 23%; bottom: -37%; animation: toRightTop 0.7s ease-out"
-    />
+    <img src="./sc_3.png" class="phoneImage phoneImage1" />
+    <img src="./sc_4.png" class="phoneImage phoneImage2" />
+    <img src="./sc_5.png" class="phoneImage phoneImage3" />
   </body>
 </html>
