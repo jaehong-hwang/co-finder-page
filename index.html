@@ -70,32 +70,39 @@
 
       .phoneImage {
         position: absolute;
-        width: 20vw;
-        height: fit-content;
+        width: 400px;
+        height: 831px;
         border-radius: 15px;
         box-shadow: 0 7px 15px rgba(0, 0, 0, 0.125);
       }
 
       .phoneImage1 {
         left: 23%;
-        bottom: -37%;
+        top: 62%;
         animation: toLeftTop 0.7s ease-out;
+        background-image: url("./sc_3.png");
+        background-size: cover;
       }
 
       .phoneImage2 {
-        width: 23vw;
+        width: 430px;
+        height: 935px;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -45%;
+        top: 55%;
         z-index: 99;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         animation: toTop 0.7s ease-out;
+        background-image: url("./sc_4.png");
+        background-size: cover;
       }
 
       .phoneImage3 {
         right: 23%;
-        bottom: -37%;
+        top: 62%;
         animation: toRightTop 0.7s ease-out;
+        background-image: url("./sc_5.png");
+        background-size: cover;
       }
 
       .button {
@@ -110,39 +117,51 @@
 
       @keyframes toLeftTop {
         from {
-          width: 18vw;
+          width: 350px;
+          height: 727px;
           left: 30%;
-          bottom: -45%;
+          top: 75%;
         }
         to {
           left: 23%;
-          bottom: -37%;
+          top: 62%;
         }
       }
 
       @keyframes toRightTop {
         from {
-          width: 18vw;
+          width: 350px;
+          height: 727px;
           right: 30%;
-          bottom: -45%;
+          top: 75%;
         }
         to {
           right: 23%;
-          bottom: -37%;
+          top: 62%;
         }
       }
 
       @keyframes toTop {
         from {
-          width: 20vw;
-          bottom: -50%;
+          width: 400px;
+          height: 831px;
+          top: 70%;
         }
         to {
-          bottom: -45%;
+          top: 55%;
         }
       }
 
       @media screen and (max-width: 768px) {
+        @keyframes toTop {
+          from {
+            top: 70%;
+          }
+          to {
+            top: 50%;
+          }
+        }
+
         .phoneImage1,
         .phoneImage3 {
           display: none;
@@ -164,7 +183,9 @@
         }
 
         .phoneImage2 {
-          width: 80vw;
+          width: 90vw;
+          height: 80vh;
+          top: 50%;
         }
       }
     </style>
@@ -179,8 +200,8 @@
       </p>
       <a href="mailto:cofindercs@gmail.com" class="button">문의하기</a>
     </div>
-    <img src="./sc_3.png" class="phoneImage phoneImage1" />
-    <img src="./sc_4.png" class="phoneImage phoneImage2" />
-    <img src="./sc_5.png" class="phoneImage phoneImage3" />
+    <div class="phoneImage phoneImage1"></div>
+    <div class="phoneImage phoneImage2"></div>
+    <div class="phoneImage phoneImage3"></div>
   </body>
 </html>
